@@ -1,0 +1,56 @@
+// trigger file - if you've done problem 9 but no stories are popping up, you
+// should edit this file to contain triggers that will fire on current news
+// stories!
+
+// title trigger named t1
+//t1,TITLE,election
+
+// description trigger named t2
+//t2,DESCRIPTION,Trump
+
+// description trigger named t3
+//t3,DESCRIPTION,Clinton
+
+// after trigger named t4
+//t4,AFTER,3 Oct 2016 17:00:10
+
+// composite trigger named t4
+//t5,AND,t2,t3
+
+// composite trigger named t4
+//t6,AND,t1,t4
+
+// the trigger list contains t1 and t4
+//ADD,t5,t6
+
+
+
+//Above is the original trigger file (I've failed in using a different file to put triggers in...)
+// These are the triggers I'd like to try:
+// TITLE Triggers
+t1,TITLE,Deep Learning
+t2,TITLE,Neuroscience and Deep Learning
+t3,TITLE,Biological Deep Learning
+
+// Description Triggers
+t4,DESCRIPTION,Artificial Neural Networks
+t5,DESCRIPTION,Biological Neural Networks
+t6,DESCRIPTION,Neuroscience and artificial intelligence
+t7,DESCRIPTION,artificial intelligence and neuroscience
+
+//After Triggers
+t8,AFTER,20 Sep 2019 17:00:10
+
+//Composite Triggers
+t9,AND,t4,t5
+t10,OR,t6,t7
+
+ADD,t10,t9,t1,t2,t3
+
+// The above provided nothing...
+
+t11,DESCRIPTION,Trump and Ukraine
+t12,TITLE,Impeachment
+ADD,t11,t12
+
+//These triggers worked.
